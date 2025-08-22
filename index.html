@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Stocks Dashboard</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    display: flex;
+    gap: 40px;
+    background: #f9f9f9;
+  }
+  .widgets {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  iframe {
+    border: none;
+    width: 100%;
+    height: 180px;
+    min-width: 320px;
+  }
+  .prices-table {
+    flex-basis: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    height: fit-content;
+  }
+  .prices-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .prices-table th, .prices-table td {
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    text-align: left;
+  }
+  .prices-table th {
+    background-color: #22ab94;
+    color: white;
+  }
+</style>
+</head>
+<body>
+
+<div class="widgets">
+  <iframe src="https://s.tradingview.com/embed-widget/mini-symbol-overview/?symbol=NYSE%3AKO&locale=en"></iframe>
+  <iframe src="https://s.tradingview.com/embed-widget/mini-symbol-overview/?symbol=NYSE%3APG&locale=en"></iframe>
+  <iframe src="https://s.tradingview.com/embed-widget/mini-symbol-overview/?symbol=NASDAQ%3ANVDA&locale=en"></iframe>
+  <iframe src="https://s.tradingview.com/embed-widget/mini-symbol-overview/?symbol=NYSE%3AJNJ&locale=en"></iframe>
+  <iframe src="https://s.tradingview.com/embed-widget/mini-symbol-overview/?symbol=NASDAQ%3APEP&locale=en"></iframe>
+  <iframe src="https://s.tradingview.com/embed-widget/mini-symbol-overview/?symbol=NYSE%3AMCD&locale=en"></iframe>
+  <iframe src="https://s.tradingview.com/embed-widget/mini-symbol-overview/?symbol=NYSE%3AT&locale=en"></iframe>
+  <iframe src="https://s.tradingview.com/embed-widget/mini-symbol-overview/?symbol=NYSE%3AVZ&locale=en"></iframe>
+</div>
+
+<div class="prices-table">
+  <h2>Stock Prices (12M Low)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Company</th>
+        <th>Symbol</th>
+        <th>1‑Year Low Price (USD)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Coca-Cola</td><td>KO</td><td>$52</td></tr>
+      <tr><td>Procter & Gamble</td><td>PG</td><td>$151</td></tr>
+      <tr><td>NVIDIA</td><td>NVDA</td><td>$86.61</td></tr>
+      <tr><td>Johnson & Johnson</td><td>JNJ</td><td>$131</td></tr>
+      <tr><td>PepsiCo</td><td>PEP</td><td>$127</td></tr>
+      <tr><td>McDonald's</td><td>MCD</td><td>$280</td></tr>
+      <tr><td>AT&T</td><td>T</td><td>$18</td></tr>
+      <tr><td>Verizon</td><td>VZ</td><td>$36</td></tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
